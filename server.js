@@ -47,7 +47,7 @@ app.post('/contact', (req, res) => {
     }).save().then( savedStudent => {
         let mailOptions = {
             from: 'luisdiazc2@gmail.com',
-            to: 'chavacontreras1@hotmail.com',
+            to: 'acuita_10@hotmail.com',
             subject: subject,
             text: text
         }
