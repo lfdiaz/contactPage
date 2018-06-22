@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-const MONGO_CONNECTION_STRING = 'mongodb://localhost:27017/';
+const MONGO_CONNECTION_STRING = 'mongodb://localhost/data/db/';
 
 mongoose.connect(MONGO_CONNECTION_STRING);
 
