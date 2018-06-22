@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
-const PORT = 8080;
+require('dotenv').config();
+const PORT = process.env.PORT || 8080;
 const Student = require('./models/Student');
 const nodemailer = require('nodemailer');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-const MONGO_CONNECTION_STRING = 'mongodb://localhost/data/db/';
+const MONGO_CONNECTION_STRING = 'mongodb+srv://lfdiaz:' + process.env.DB_PSWD + '@contactcedva-jfhff.mongodb.net/student?retryWrites=true';
 
 mongoose.connect(MONGO_CONNECTION_STRING);
 
