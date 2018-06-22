@@ -12,6 +12,8 @@ const MONGO_CONNECTION_STRING = 'mongodb://localhost/data/db/';
 
 mongoose.connect(MONGO_CONNECTION_STRING);
 
+mongoose.Promise = global.Promise;
+
 const connection = mongoose.connection;
 
 connection.once("open", ()=> {
