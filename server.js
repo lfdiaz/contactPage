@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
-const env = require('env').config();
 const PORT = 8080;
 const Student = require('./models/Student');
 const nodemailer = require('nodemailer');
