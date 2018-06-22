@@ -30,6 +30,10 @@ let transporter = nodemailer.createTransport({
     }
 })
 
+app.get("/", function(req, res) {
+    res.send("Hello World!");
+  });
+
 app.post('/contact', (req, res) => {
     let name = req.body.name;
     let major = req.body.major;
